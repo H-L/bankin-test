@@ -6,7 +6,7 @@
   align-content: flex-start;
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 64px);
+  min-height: 100vh;
   overflow-y: scroll;
 }
 
@@ -19,6 +19,7 @@
 
 .home__title{
   font-size: 23px;
+  font: normal 700 "Open Sans";
 }
 
 .home__image{
@@ -37,8 +38,5 @@
   color: white;
   background: #6562FD;
   align-self: flex-end;
-}
-
-.home__navigation:hover{
-  cursor: pointer;
+  text-align: center;
 }
