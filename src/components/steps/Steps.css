@@ -1,0 +1,45 @@
+.step{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 100vh;
+  overflow-y: scroll; 
+}
+
+.step input {
+  width: 100%;
+  font-size:17px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  border:none;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+.step input:focus {
+  outline: 0;
+}
+
+.step__title{
+  font: normal 700 19px "Open Sans";
+  padding: 0.5em;
+}
+
+.step__navigation{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.button--purple{
+  font: normal 700 17px "Open Sans";
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  height: 40px;
+  background: #6562FD;
+  color: white;
+}
