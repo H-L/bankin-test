@@ -16,17 +16,19 @@ class App extends Component {
     }
   }
 
+  // Submit the step form
   handleSubmit = (e, history, stepId) => {
     e.preventDefault();
     history.push("/steps/" + (stepId+1));
   }
 
+  // Change on step input
   handleChange = (e) => {
+    let answers = this.state.answers;
+    answers[e.target.id] = e.target.value;
     this.setState({
-      answers: {
-        [e.target.id]: e.target.value
-      }
-    })
+      answers: answers
+    });
   }
 
   render() {
@@ -36,9 +38,14 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route  path="/steps/:stepId" 
-                    render={(props) => (<Steps {...props} handleChange={this.handleChange.bind(this)} handleSubmit={this.handleSubmit.bind(this)} />)}
+                    render={(props) => (
+                      <Steps {...props} 
+                        handleChange={this.handleChange.bind(this)} 
+                        handleSubmit={this.handleSubmit.bind(this)} 
+                      />
+                    )}
             />
-            <Route path="/end" component={End} />
+            <Route path="/end" component={(props) => <End {...props} answers={this.state.answers} />} />
           </Switch>
         </div>
       </Router>
