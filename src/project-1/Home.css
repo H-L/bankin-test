@@ -1,0 +1,46 @@
+.home__topBar{
+  width: 100%;
+  flex: 0 0 88px;
+  background: #50BAFF;
+}
+
+.home__container{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+/* Image resized depending on height of other elements for fully responsive container without scroll */
+.home__bgImage{
+  background: url('../assets/img/Cochon-OPT.gif') no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  flex: 1 0 auto;
+  margin: 0 0 1em 0;
+}
+
+.home__text{
+  padding: 10px;
+}
+
+.home__text p{
+  font-size: 17px;
+}
+
+.home__title{
+  font-size: 23px;
+  padding: 0 0 1em 0;
+}
+
+.home__link{
+  font-size: 23px;
+  margin-top: auto;
+  background: #6562FD;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
